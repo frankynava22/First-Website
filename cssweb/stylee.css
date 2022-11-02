@@ -1,0 +1,241 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+}
+
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+div {
+    width: 100vw;
+    height: 100vh;
+}
+
+/*HEADER*/
+
+/*initials*/
+.decor{
+  font-family: 'Raleway',sans-serif;
+  font-weight: 800;
+  font-size: 5em;
+  width: 5em;
+  line-height: 0.9em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1.5em;
+  margin-top: calc(50vh - 1em);
+}
+
+.initials{
+  padding-top: 30vh;
+  padding-right: 30vh;
+  text-align: center;
+  font-size: 13vh;
+  font-family: 'Sail', cursive;
+  background: #cad3d7;
+  background-color: #122430;
+  background-image: linear-gradient(
+        45deg,
+        #1a2c36 16.666%, 
+        #d8c4c6 16.666%, 
+        #d8c4c6 33.333%, 
+        #8ab6c5 33.333%, 
+        #8ab6c5 50%, 
+        #2a424e 50%, 
+        #2a424e 66.666%, 
+        #30414b 66.666%, 
+        #30414b 83.333%, 
+        #cad3d7 83.333%);
+        background-size: 57%;
+        background-repeat: repeat;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: rainbow-text-animation-rev 0.5s ease forwards;
+        cursor: pointer;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color:#11273a;
+}
+
+.initials:hover{
+  animation: rainbow-text-animation 0.5s ease forwards;
+}
+/*initials end*/
+
+html{
+  font-size: 10px;
+  font-family: "Raleway", sans-serif;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+a{
+  text-decoration: none;
+  color: #11273a;
+}
+
+header{
+  width: 100%;
+  height: 100vh;
+  background: url("../images/img_nature.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.container{
+  max-width: 120rem;
+  width: 90%;
+  margin: 0 auto;
+  
+}
+
+nav{
+  padding-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+
+}
+
+/*top left FRANKY */
+.brand{
+  font-size: 2.7rem;
+  font-weight: 500;
+  transform: translateX(-100rem);
+  animation: slideIn .5s forwards;
+
+}
+
+.brand span{
+  color: #ffd394;
+}
+
+/*end*/
+
+nav ul{
+  display: flex;
+
+}
+
+nav ul li{
+  list-style: none;
+  transform: translateX(100rem);
+  animation: slideIn .5s forwards;
+}
+
+nav ul li:nth-child(1){
+  animation-delay: 0s;
+}
+
+nav ul li:nth-child(2){
+  animation-delay: .5s;
+}
+
+nav ul li:nth-child(3){
+  animation-delay: 1s;
+}
+
+nav ul li:nth-child(4){
+  animation-delay: 1.5s;
+}
+
+/*top right*/
+nav ul li a{
+  padding: 1rem 0;
+  margin: 0 3rem;
+  position: relative;
+  letter-spacing: 2px;
+
+
+}
+
+nav ul li a:last-child{
+  margin-right: 0;
+}
+
+nav ul li a::before,
+nav ul li a::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #ffdfba;
+  left: 0;
+  transform: scaleX(0);
+  transition: all .5s;
+}
+
+nav ul li a::before{
+  top: 0;
+  transform-origin: left;
+}
+
+nav ul li a::after{
+  bottom: 0;
+  transform-origin: right;
+}
+
+nav ul li a:hover::before,
+nav ul li a:hover::after{
+  transform: scaleX(1);
+}
+
+@keyframes slideIn{
+  from{
+
+  }
+  to{
+    transform: translateX(0);
+  }
+}
+
+
+@media only screen and (max-device-width: 1366px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
+
+/*initials decor*/
+@keyframes rainbow-text-animation{
+  0% {
+    background-size: 57%;
+    background-position: 0 0;
+  }
+  20% {
+    background-size: 57%;
+    background-position: 0 1em;
+  }
+  100% { 
+    background-size: 300%;
+    background-position: -9em 1em;
+  }
+}
+
+@keyframes rainbow-text-animation-rev
+{
+  0% {
+    background-size: 300%;
+    background-position: -9em 1em;
+  }
+  20% {
+    background-size: 57%;
+    background-position: 0 1em;
+  }
+  100% {
+    background-size: 57%;
+    background-position: 0 0;
+  }
+}
+
+
